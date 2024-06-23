@@ -1,4 +1,4 @@
-﻿# Rock 🪨 , Paper :page_facing_up:, Scissors :scissors: Console Game 
+﻿# Rock 🪨  Paper :page_facing_up: Scissors :scissors: Console Game 
 
 Welcome to the classic game of Rock, Paper, Scissors, implemented as a console application where you can challenge an AI opponent!
 
