@@ -5,6 +5,15 @@ VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPS-Game", "RPS-Game\RPS-Game.csproj", "{6966F542-FCC8-486A-A71E-4963396A8431}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FD73EA7C-42A5-422C-84A0-FE2252D43531}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerTests.cs", "PlayerTests.cs\PlayerTests.cs.csproj", "{20880B0B-C5FA-46C7-BEA0-5F339F962D1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPSGameTests.cs", "RPSGameTests.cs\RPSGameTests.cs.csproj", "{66857BE3-DD7B-4ACA-98CF-DA8F2FF9DBDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,14 @@ Global
 		{6966F542-FCC8-486A-A71E-4963396A8431}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6966F542-FCC8-486A-A71E-4963396A8431}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6966F542-FCC8-486A-A71E-4963396A8431}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20880B0B-C5FA-46C7-BEA0-5F339F962D1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20880B0B-C5FA-46C7-BEA0-5F339F962D1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20880B0B-C5FA-46C7-BEA0-5F339F962D1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20880B0B-C5FA-46C7-BEA0-5F339F962D1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66857BE3-DD7B-4ACA-98CF-DA8F2FF9DBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66857BE3-DD7B-4ACA-98CF-DA8F2FF9DBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66857BE3-DD7B-4ACA-98CF-DA8F2FF9DBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66857BE3-DD7B-4ACA-98CF-DA8F2FF9DBDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
