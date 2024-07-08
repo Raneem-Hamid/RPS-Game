@@ -1,7 +1,7 @@
 using Xunit;
 using RPS_Game;
 
-namespace RPSGameTests.cs
+namespace RPS_Game.Tests
 {
     public class RPSGameTests
     {
@@ -15,7 +15,7 @@ namespace RPSGameTests.cs
         [InlineData("rock", "rock", "It's a tie!")]
         [InlineData("paper", "paper", "It's a tie!")]
         [InlineData("scissors", "scissors", "It's a tie!")]
-        public void RoundWinner_ValidMoves_CorrectResult(string humanMove, string aiMove, string expectedResult)
+        public void DetermineWinner_ValidMoves_CorrectResult(string humanMove, string aiMove, string expectedResult)
         {
             // Arrange
             Player human = new Player { Name = "Player" };
@@ -27,6 +27,63 @@ namespace RPSGameTests.cs
 
             // Assert
             Assert.Equal(expectedResult, result);
+        }
+
+        [Theory]
+        [InlineData("rock", "scissors")]
+        [InlineData("paper", "rock")]
+        [InlineData("scissors", "paper")]
+        public void DetermineWinner_PlayerWins_UpdatesScore(string humanMove, string aiMove)
+        {
+            // Arrange
+            Player human = new Player { Name = "Player" };
+            Player ai = new Player { Name = "AI" };
+            RPSGame game = new RPSGame(human, ai);
+
+            // Act
+            game.DetermineWinner(humanMove, aiMove);
+
+            // Assert
+            Assert.Equal(1, human.Score);
+            Assert.Equal(0, ai.Score);
+        }
+
+        [Theory]
+        [InlineData("rock", "paper")]
+        [InlineData("paper", "scissors")]
+        [InlineData("scissors", "rock")]
+        public void DetermineWinner_AiWins_UpdatesScore(string humanMove, string aiMove)
+        {
+            // Arrange
+            Player human = new Player { Name = "Player" };
+            Player ai = new Player { Name = "AI" };
+            RPSGame game = new RPSGame(human, ai);
+
+            // Act
+            game.DetermineWinner(humanMove, aiMove);
+
+            // Assert
+            Assert.Equal(0, human.Score);
+            Assert.Equal(1, ai.Score);
+        }
+
+        [Theory]
+        [InlineData("rock", "rock")]
+        [InlineData("paper", "paper")]
+        [InlineData("scissors", "scissors")]
+        public void DetermineWinner_Tie_NoScoreChange(string humanMove, string aiMove)
+        {
+            // Arrange
+            Player human = new Player { Name = "Player" };
+            Player ai = new Player { Name = "AI" };
+            RPSGame game = new RPSGame(human, ai);
+
+            // Act
+            game.DetermineWinner(humanMove, aiMove);
+
+            // Assert
+            Assert.Equal(0, human.Score);
+            Assert.Equal(0, ai.Score);
         }
     }
 }
